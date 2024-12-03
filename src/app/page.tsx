@@ -1,9 +1,14 @@
 /** @format */
 
+"use client";
+
 import { Collection } from "@/components/Collection";
 import { NavHeader } from "@/components/NavHeader";
 import { Search } from "@/components/Search";
 import { Viewmenu } from "@/components/Viewmenu";
+import { useAuthContext } from "@/context/AuthContext";
+import { useRouter } from "next/navigation";
+import { useEffect } from "react";
 
 const sampleWords = [
   "paradigm",
@@ -18,6 +23,15 @@ const sampleWords = [
 ];
 
 export default function Home() {
+  const { user } = useAuthContext();
+  const router = useRouter();
+
+  useEffect(() => {
+    if (!user) {
+      router.push("/auth/signin");
+    }
+  }, [user]);
+
   return (
     <>
       <NavHeader />
