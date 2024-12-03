@@ -12,7 +12,7 @@ export function Search() {
 
   return (
     <Input
-      icon={<IoIosSearch className="4xl" />}
+      icon={<IoIosSearch className="4xl text-secondary" />}
       placeholder="Search..."
       setInput={(e) => setQuery(e.target.value)}
       classname="w-[800px] h-[40px]"

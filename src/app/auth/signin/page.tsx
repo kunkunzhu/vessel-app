@@ -45,22 +45,22 @@ function Page() {
         >
           <p>Email</p>
           <Input
-            icon={<IoIosMail className="2xl" />}
+            icon={<IoIosMail className="2xl text-secondary" />}
             setInput={(e) => {
               setError("");
               setEmail(e.target.value);
             }}
             placeholder="example@mail.com"
-            classname="min-w-[220px]"
+            classname="min-w-[220px] text-secondary"
           />
         </label>
         <label
           htmlFor="email"
-          className=" flex items-center  justify-between gap-4"
+          className=" flex items-center justify-between gap-4"
         >
           <p>Password</p>
           <Input
-            icon={<FaKey className="2xl" />}
+            icon={<FaKey className="2xl text-secondary" />}
             setInput={(e) => {
               setError("");
               setPassword(e.target.value);

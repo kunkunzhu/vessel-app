@@ -12,11 +12,11 @@ interface InputI {
 export function Input({ icon, placeholder, setInput, classname = "" }: InputI) {
   return (
     <div
-      className={`flex items-center gap-2 border border-secondary text-secondary bg-white rounded-lg p-2 pl-4 ${classname}`}
+      className={`flex items-center gap-2 border border-secondary  bg-white rounded-lg p-2 pl-4 ${classname}`}
     >
       {icon && icon}
       <input
-        className="italic font-title outline-none"
+        className="italic font-title outline-none text-accent"
         placeholder={placeholder}
         onChange={setInput}
       />
