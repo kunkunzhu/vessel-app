@@ -16,7 +16,7 @@ export function Input({ icon, placeholder, setInput, classname = "" }: InputI) {
     >
       {icon && icon}
       <input
-        className="italic font-title outline-none text-accent"
+        className="italic font-title outline-none text-accent w-full"
         placeholder={placeholder}
         onChange={setInput}
       />

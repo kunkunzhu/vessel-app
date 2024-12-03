@@ -10,7 +10,7 @@ function Word({ word }: { word: string }) {
 
 export function Collection({ words }: { words: string[] }) {
   return (
-    <div className="flex gap-4">
+    <div className="flex flex-wrap gap-4">
       {words.map((word, index) => (
         <Word word={word} key={index} />
       ))}
