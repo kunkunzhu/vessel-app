@@ -3,6 +3,7 @@
 import type { Metadata } from "next";
 import { Instrument_Sans, Instrument_Serif } from "next/font/google";
 import "./globals.css";
+import { AuthContextProvider } from "@/context/AuthContext";
 
 const textFont = Instrument_Sans({
   subsets: ["latin"],
@@ -31,7 +32,7 @@ export default function RootLayout({
         className={`${textFont.variable} ${titleFont.variable} 
         overflow-hidden font-text w-screen h-screen flex flex-col bg-background text-primary`}
       >
-        {children}
+        <AuthContextProvider>{children}</AuthContextProvider>
       </body>
     </html>
   );
