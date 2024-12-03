@@ -78,7 +78,12 @@ function Page() {
           </div>
         </div>
         <div className="flex justify-center mt-4">
-          <Button text="Sign up" type="submit" onClick={handleForm} />
+          <Button
+            text="Sign up"
+            type="submit"
+            onClick={handleForm}
+            classname="px-8 py-2"
+          />
         </div>
       </form>
     </div>

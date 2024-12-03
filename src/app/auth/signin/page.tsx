@@ -80,7 +80,12 @@ function Page() {
           {error && <div className="text-red-500">Oops! {error}</div>}
         </div>
         <div className="flex justify-center mt-4">
-          <Button text="Sign in" type="submit" onClick={handleForm} />
+          <Button
+            text="Sign in"
+            type="submit"
+            onClick={handleForm}
+            classname="px-8 py-2"
+          />
         </div>
       </form>
     </div>
