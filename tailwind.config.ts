@@ -1,3 +1,5 @@
+/** @format */
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -9,8 +11,17 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        background: "var(--off-white)",
+        primary: "var(--off-black)",
+        secondary: "var(--pale-purple)",
+        accent: "var(--purple)",
+      },
+      fontFamily: {
+        text: ["var(--text-font)"],
+        title: ["var(--title-font)"],
+      },
+      dropShadow: {
+        bullet: "0px 0px 5px rgba(69, 12, 255, 0.2)",
       },
     },
   },
