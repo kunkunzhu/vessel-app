@@ -32,16 +32,16 @@ function Page() {
 
     // else successful
     console.log(result);
-    return router.push("/admin");
+    return router.push("/");
   };
   return (
     <div className="mt-4">
       <form onSubmit={handleForm} className="flex flex-col  gap-2 w-[320px]">
         <label
           htmlFor="email"
-          className=" flex items-center justify-between gap-4"
+          className="flex items-center justify-between gap-4"
         >
-          <p>Email</p>
+          <p className="font-title">Email</p>
           <Input
             icon={<IoIosMail className="2xl text-secondary" />}
             setInput={(e) => {
@@ -54,9 +54,9 @@ function Page() {
         </label>
         <label
           htmlFor="email"
-          className=" flex items-center justify-between gap-4"
+          className="flex items-center justify-between gap-4"
         >
-          <p>Password</p>
+          <p className="font-title">Password</p>
           <Input
             icon={<FaKey className="2xl text-secondary" />}
             setInput={(e) => {
