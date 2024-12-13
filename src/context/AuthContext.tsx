@@ -34,10 +34,11 @@ interface AuthContextProviderProps {
 // The AuthContextProvider component
 export const AuthContextProvider = ({ children }: AuthContextProviderProps) => {
   const [user, setUser] = useState<User | null>(null);
-  const [loading, setLoading] = useState<boolean>(true);
+  const [loading, setLoading] = useState<boolean>(false);
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+      setLoading(true);
       setUser(currentUser);
       setLoading(false);
     });
