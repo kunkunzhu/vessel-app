@@ -28,7 +28,7 @@ function Page() {
     const { result, error } = await signIn(email, password);
 
     if (error) {
-      return console.log(error);
+      return setError("Please double check your email and password! ᴖ̈");
     }
 
     // else successful
@@ -65,13 +65,14 @@ function Page() {
               setError("");
               setPassword(e.target.value);
             }}
+            type="password"
             placeholder="12345"
             classname="min-w-[220px]"
           />
         </label>
         <div className="text-xs mb-4">
           <div className="opacity-75 ">
-            Don't have an account yet?{" "}
+            Don&apos;t have an account yet?{" "}
             <Link href="/auth/signup" className="underline text-accent">
               Sign up
             </Link>{" "}
