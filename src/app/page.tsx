@@ -4,6 +4,7 @@
 
 import { Collection } from "@/components/Collection";
 import { Button } from "@/components/form/Button";
+import { WordModal } from "@/components/modal/WordModal";
 import { NavHeader } from "@/components/NavHeader";
 import { Search } from "@/components/Search";
 import { Viewmenu } from "@/components/Viewmenu";
@@ -13,10 +14,10 @@ import { WordI } from "@/lib/types";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
-interface AddModalI {
-  open: boolean;
-  closeModal: () => void;
-}
+// interface AddModalI {
+//   open: boolean;
+//   closeModal: () => void;
+// }
 
 export default function Home() {
   const { user } = useAuthContext();
@@ -45,6 +46,9 @@ export default function Home() {
 
   return (
     <div className="px-20 flex flex-col gap-6">
+      {
+        word && <WordModal open={!!word} onClose={() => setWord(null)} w={word} />
+      }
       <NavHeader />
       <div className="flex items-center gap-20 pt-8">
         <Viewmenu />
