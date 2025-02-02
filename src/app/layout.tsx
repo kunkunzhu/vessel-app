@@ -30,7 +30,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`${textFont.variable} ${titleFont.variable} 
-        overflow-hidden font-text w-screen h-screen flex flex-col bg-background text-primary`}
+        font-text w-screen h-screen flex flex-col bg-background text-primary`}
       >
         <AuthContextProvider>{children}</AuthContextProvider>
       </body>

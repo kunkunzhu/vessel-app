@@ -14,7 +14,7 @@ export const Modal = ({ open, onClose, content, title, classname = "" }: ModalI)
     return (
         <dialog
             open={open}
-            className={`backdrop-blur bg-white/50 z-50 fixed inset-0 flex flex-col rounded-lg border-accent border ${classname}`}
+            className={`backdrop-blur bg-white z-50 fixed inset-0 flex flex-col rounded-lg border-accent border ${classname}`}
         >
             <div className="flex justify-end">
                 <IoMdClose onClick={onClose} className="size-4 text-accent" />

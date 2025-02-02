@@ -100,7 +100,7 @@ export const WordModal = ({ open, onClose, w }: WordModalI) => {
             onClose={onClose}
             title={renderTitle({ word })}
             content={renderContent({ definitions })}
-            classname="w-[480px] min-h-[240px] gap-4 px-4 pt-4 pb-8 "
+            classname="w-[480px] min-h-[240px] gap-4 px-4 pt-4 pb-8 drop-shadow-card"
         />
     );
 }

@@ -22,6 +22,7 @@ export default {
       },
       dropShadow: {
         bullet: "0px 0px 5px rgba(69, 12, 255, 0.2)",
+        card: "0px 0px 10px rgba(69, 12, 255, 0.1)",
       },
     },
   },
