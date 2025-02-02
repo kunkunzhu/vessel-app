@@ -4,6 +4,8 @@ import {
   getFirestore,
   doc,
   setDoc,
+  query,
+  where,
   collection,
   getDocs,
   deleteDoc,
@@ -28,9 +30,14 @@ export const addWordForUser = async (userId: string, wordData: WordI) => {
   }
 };
 
-export const fetchUserWords = async (userId: string) => {
+export const fetchUserWords = async ({ userId, searchQuery }: { userId: string, searchQuery: string }) => {
   try {
-    const wordsCollection = collection(db, "users", userId, "words");
+    const wordsCollection = searchQuery ? query(
+      collection(db, "users", userId, "words"),
+      where('word', '>=', searchQuery),
+      where('word', '<=', searchQuery + '\uf8ff')
+    ) : collection(db, "users", userId, "words")
+
     const snapshot = await getDocs(wordsCollection);
 
     const words: WordI[] = snapshot.docs.map((doc) => ({
