@@ -51,7 +51,7 @@ function Page() {
               setEmail(e.target.value);
             }}
             placeholder="example@mail.com"
-            classname="min-w-[220px] text-secondary"
+            className="min-w-[220px] text-secondary"
           />
         </label>
         <label
@@ -67,7 +67,7 @@ function Page() {
             }}
             type="password"
             placeholder="12345"
-            classname="min-w-[220px]"
+            className="min-w-[220px]"
           />
         </label>
         <div className="text-xs mb-4">
@@ -85,7 +85,7 @@ function Page() {
             text="Sign in"
             type="submit"
             onClick={handleForm}
-            classname="px-8 py-2"
+            className="px-8 py-2"
           />
         </div>
       </form>

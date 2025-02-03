@@ -43,7 +43,7 @@ export function Collection({
 
 
   return (
-    <div className="flex flex-col gap-6 overflow-scroll">
+    <div className="flex flex-col gap-6 pt-10 pb-20">
       {
         letters.map((letter) => (
           <div key={letter} className="flex flex-col gap-2">

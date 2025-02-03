@@ -15,7 +15,7 @@ export function Search({ setQuery }: SearchI) {
       icon={<IoIosSearch className="4xl text-secondary" />}
       placeholder="Search..."
       setInput={(e) => setQuery(e.target.value)}
-      classname="w-[720px] h-[40px]"
+      className="w-[720px] h-[40px]"
     />
   );
 }
