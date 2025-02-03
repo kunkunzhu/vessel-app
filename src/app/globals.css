@@ -9,5 +9,26 @@
     --off-black: #2b2b2b;
     --pale-purple: #d7cbfc;
     --purple: #8b6de9;
+
+    --accent-yellow: #FFFFC0;
+    --accent-coral: #FFD9C5;
+    --accent-pink: #FFD3ED;
+    --accent-blue: #DAF6FF;
+  }
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .fade-scroll {
+    mask-image: linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
+    -webkit-mask-image: linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
   }
 }

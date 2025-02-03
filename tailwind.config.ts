@@ -15,6 +15,11 @@ export default {
         primary: "var(--off-black)",
         secondary: "var(--pale-purple)",
         accent: "var(--purple)",
+
+        blue: "var(--accent-blue)",
+        coral: "var(--accent-coral)",
+        yellow: "var(--accent-yellow)",
+        pink: "var(--accent-pink)",
       },
       fontFamily: {
         text: ["var(--text-font)"],
