@@ -53,7 +53,7 @@ export const fetchUserWords = async ({ userId, searchQuery }: { userId: string, 
   }
 };
 
-export const deleteWordForUser = async (userId: string, wordData: WordI) => {
+export const deleteWordForUser = async ({ userId, wordData }: { userId: string, wordData: WordI }) => {
   try {
     const wordDoc = doc(
       db,
