@@ -175,7 +175,7 @@ export default function Home() {
           word && <WordModal open={!!word} onClose={() => setWord(null)} w={word} deleteWord={deleteWord} className="w-[480px] min-h-[240px]" />
         }
         <NavHeader />
-        <div className="flex items-center gap-20 pt-8 h-[10vh]">
+        <div className={`flex items-center ${word && "hidden"} gap-20 pt-8 h-[10vh]`}>
           {
             adding ? <AddingInput
               setWord={setNewWord}
@@ -194,7 +194,7 @@ export default function Home() {
           }
 
         </div>
-        <div className={`flex justify-start overflow-auto h-[80vh] no-scrollbar ${!adding && "fade-scroll"}`}>
+        <div className={`flex ${word && "blur-3xl"} justify-start overflow-auto h-[80vh] no-scrollbar ${!adding && "fade-scroll"}`}>
           {adding ?
             <div className="flex mt-10 mb-10">
               {
