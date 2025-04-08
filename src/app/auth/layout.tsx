@@ -18,7 +18,7 @@ export default function AuthLayout({
     if (user) {
       router.push("/");
     }
-  }, [user]);
+  }, [user, router]);
 
   return (
     <div className="flex items-center flex-col my-auto">

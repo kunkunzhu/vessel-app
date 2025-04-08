@@ -3,6 +3,7 @@
 interface ButtonI {
   text: string;
   type?: "submit" | "reset" | "button" | undefined;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   onClick: (params?: any) => any;
   className?: string;
 }

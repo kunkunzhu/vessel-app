@@ -70,7 +70,7 @@ export default function Home() {
     };
 
     lookUpWord();
-  }, [newWord]);
+  }, [newWord, words]);
 
   const selectWord = (word: WordI) => {
     setWord(word);
