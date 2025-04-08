@@ -1,5 +1,5 @@
 <!-- @format -->
 
-# Vessel Chrome Extension
+# Vessle Chrome Extension
 
 Built using Next.js with TypeScript, and Firebase. 💌
