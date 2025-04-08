@@ -180,7 +180,10 @@ export default function Home() {
             adding ? <AddingInput
               setWord={setNewWord}
               clearError={() => setAddingMessage(null)}
-              cancel={() => setAdding(false)} /> : (
+              cancel={() => {
+                setAddingMessage(null)
+                setAdding(false)
+              }} /> : (
               <Button
                 text="add word"
                 onClick={() => setAdding(true)}
